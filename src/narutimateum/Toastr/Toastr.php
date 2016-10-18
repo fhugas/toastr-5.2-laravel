@@ -47,7 +47,7 @@ class Toastr {
      */
     public function render() {
         $notifications = $this->session->get('toastr::notifications');
-        if(!$notifications) $notifications = [];
+        if(!$notifications) return;
 
         $output = '<script type="text/javascript">';
         $lastConfig = [];
